@@ -3,272 +3,464 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jack Foster</title>
+  <title>Jack Foster — Backend Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-content">
-      <div class="nav-logo">Jack Foster</div>
-      <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 class="hero-title">Hi, I'm Jack.</h1>
-    <p class="hero-subtitle">Product-Focused Software Engineer &amp; Data Engineer.</p>
-    <p class="hero-description">Building intelligent systems and beautiful data products that transform complexity into clarity.</p>
-    <div class="cta-buttons">
-      <a href="#work" class="btn btn-primary">View my work</a>
-      <a href="mailto:jackfoster246@gmail.com" class="btn btn-secondary">Get in touch</a>
-    </div>
-  </section>
-
-  <!-- Feature Section 1 -->
-  <section class="scroll-section section-dark">
-    <div class="section-content">
-      <div class="section-eyebrow">Engineering Excellence</div>
-      <h2 class="section-headline">Building intelligent systems that scale.</h2>
-      <p class="section-description">From data pipelines processing millions of records to AI-powered automation tools, I create solutions that are both powerful and elegant.</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3 class="feature-title">Lightning Fast</h3>
-          <p class="feature-text">Optimized data pipelines that process millions of records with sub-second latency.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎯</div>
-          <h3 class="feature-title">Precision Built</h3>
-          <p class="feature-text">Every system designed with observability, reliability, and maintainability in mind.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🚀</div>
-          <h3 class="feature-title">Production Ready</h3>
-          <p class="feature-text">Ship with confidence. Clean architecture, comprehensive testing, CI/CD integration.</p>
-        </div>
+  <div class="grain"></div>
+  <header class="main-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <div class="brand">Jack Foster</div>
+      <div class="nav-status" aria-live="polite">Active chapter: <span id="nav-status-text">Prologue</span></div>
+      <div class="nav-actions">
+        <button class="ghost" id="cmdk-trigger" aria-label="Open command palette">⌘K</button>
+        <a class="primary" href="#contact">Contact</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Feature Section 2 -->
-  <section class="scroll-section section-light">
-    <div class="section-content">
-      <div class="section-eyebrow">Data Intelligence</div>
-      <h2 class="section-headline">Real estate analytics that actually make sense.</h2>
-      <p class="section-description">Transform raw market data into actionable insights. Built with AWS, Spark, and modern ML frameworks to forecast trends and identify opportunities.</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="scroll-section" id="work" style="background: #fff;">
-    <div class="section-content">
-      <div class="section-eyebrow">Selected Work</div>
-      <h2 class="section-headline">Projects that make an impact.</h2>
-      
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-image">📊</div>
-          <div class="project-content">
-            <h3 class="project-title">Real Estate Analytics Platform</h3>
-            <p class="project-description">Comprehensive data pipeline ingesting Zillow and census data with predictive modeling for property values. Reduced analyst prep time by 60%.</p>
-            <div class="project-tags">
-              <span class="tag">AWS Glue</span>
-              <span class="tag">Spark</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">React</span>
+  <main>
+    <section class="panel hero" id="hero" data-section="Prologue">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Backend engineer · Python + Java · Vanguard</p>
+          <h1 class="hero-title">Cinematic systems for real-world finance.</h1>
+          <p class="lede">I'm Jack Foster, a backend-focused engineer who builds API-driven, production-grade platforms for portfolio analytics and decision intelligence. Calm orchestration, resilient services, and storytelling-worthy experiences.</p>
+          <div class="cta-row">
+            <button class="primary" id="story-mode">Story mode</button>
+            <a class="ghost" href="assets/Jack_Foster_Resume.pdf" download>Download résumé</a>
+          </div>
+          <div class="meta-row">
+            <div>
+              <p class="meta-label">Current</p>
+              <p class="meta-value">Portfolio & Product Insights · Vanguard</p>
             </div>
-            <a href="#" class="project-link">Learn more →</a>
+            <div>
+              <p class="meta-label">Focus</p>
+              <p class="meta-value">APIs · Distributed systems · Data tooling</p>
+            </div>
           </div>
         </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-image">🤖</div>
-          <div class="project-content">
-            <h3 class="project-title">AI Ops Agent</h3>
-            <p class="project-description">Intelligent agent that summarizes CloudWatch signals and suggests remediations. Cut mean-time-to-respond by 35%.</p>
-            <div class="project-tags">
-              <span class="tag">LLM Agents</span>
-              <span class="tag">Lambda</span>
-              <span class="tag">OpenSearch</span>
-              <span class="tag">TypeScript</span>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="portrait-card">
+            <div class="portrait-glow"></div>
+            <div class="portrait-content">
+              <p class="mono">Latency budget</p>
+              <h2>47 ms</h2>
+              <p class="muted">Median response across advisor insights services.</p>
+              <div class="pill-row">
+                <span>Python</span><span>Kubernetes</span><span>Kafka</span>
+              </div>
             </div>
-            <a href="#" class="project-link">Learn more →</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-image">💰</div>
-          <div class="project-content">
-            <h3 class="project-title">Fintech Spend Intelligence</h3>
-            <p class="project-description">Data model and visualization suite surfacing merchant trends and customer health. Identified $1.2M in at-risk revenue.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Airflow</span>
-              <span class="tag">dbt</span>
-              <span class="tag">Tableau</span>
+    <section class="panel chapter" id="chapters" data-section="Systems narrative">
+      <div class="section-header">
+        <p class="eyebrow">Scroll chapters</p>
+        <h2>Backend storytelling with calm precision.</h2>
+        <p class="lede">Each section brightens as you enter it. Smooth fades, gentle parallax, and rotational micro-movements keep the experience cinematic without mimicking Apple.</p>
+      </div>
+      <div class="chapter-grid">
+        <article class="chapter-card">
+          <p class="chapter-index">01</p>
+          <h3>Signal over noise</h3>
+          <p class="muted">APIs and services that surface the right metrics for advisors—portfolio risk deltas, product adoption, and client impact—without slowing the stack.</p>
+        </article>
+        <article class="chapter-card">
+          <p class="chapter-index">02</p>
+          <h3>Infrastructure as craft</h3>
+          <p class="muted">Event-driven pipelines, distributed tasks, and observability baked into every release. Designed for zero-downtime shipping and graceful degradation.</p>
+        </article>
+        <article class="chapter-card">
+          <p class="chapter-index">03</p>
+          <h3>Story-first delivery</h3>
+          <p class="muted">Guided walkthroughs, pull-focus highlights, and interactive diagrams help stakeholders feel the architecture, not just read it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel case" id="vanguard" data-section="Vanguard impact">
+      <div class="section-header">
+        <p class="eyebrow">Case study</p>
+        <h2>Portfolio & Product Insights · Vanguard</h2>
+        <p class="lede">Engineered backend services that power advisor analytics—mirroring the sophistication of Vanguard's portfolio strategy tools with bespoke APIs, distributed workers, and resilient data orchestration.</p>
+      </div>
+      <div class="case-layout">
+        <div class="case-story">
+          <div class="story-block">
+            <p class="label">Context</p>
+            <p class="muted">Multi-team platform delivering risk, performance, and product signals to financial advisors in real time.</p>
+          </div>
+          <div class="story-block">
+            <p class="label">Solution</p>
+            <p class="muted">Python microservices on Kubernetes, Kafka streams for ingestion, and domain-driven APIs exposing portfolio deltas with SLA-backed endpoints.</p>
+          </div>
+          <div class="story-block">
+            <p class="label">Result</p>
+            <p class="muted">99.97% uptime, sub-50ms p50 latency for core endpoints, and faster advisor conversations through live portfolio signals.</p>
+          </div>
+          <div class="tag-row">
+            <span>Python</span><span>FastAPI</span><span>Kafka</span><span>PostgreSQL</span><span>Grafana</span><span>Kubernetes</span>
+          </div>
+        </div>
+        <div class="case-viz" aria-label="Scroll-responsive data visualization">
+          <div class="viz-header">
+            <p class="mono">Request latency</p>
+            <p class="muted">Autoscales with scroll to illustrate live performance.</p>
+          </div>
+          <div class="viz-bars">
+            <div class="bar" data-height="72">
+              <span class="bar-label">Pre-optimization</span>
+              <div class="bar-fill"></div>
+              <span class="bar-value">132 ms</span>
             </div>
-            <a href="#" class="project-link">Learn more →</a>
+            <div class="bar" data-height="48">
+              <span class="bar-label">After instrumentation</span>
+              <div class="bar-fill"></div>
+              <span class="bar-value">91 ms</span>
+            </div>
+            <div class="bar" data-height="32">
+              <span class="bar-label">Current p50</span>
+              <div class="bar-fill"></div>
+              <span class="bar-value">47 ms</span>
+            </div>
+          </div>
+          <div class="viz-footer">
+            <p class="mono">Observability</p>
+            <p class="muted">Tracing + SLO dashboards feed back into sprint planning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel projects" id="projects" data-section="Case studies">
+      <div class="section-header">
+        <p class="eyebrow">Selected work</p>
+        <h2>Cinematic case studies without the cliché.</h2>
+        <p class="lede">Context → Problem → Solution → Result. Each project is a slide in the scroll narrative.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project">
+          <div class="project-meta">
+            <p class="mono">01 · Vanguard</p>
+            <h3>Advisor Product Signals</h3>
+            <p class="muted">API suite surfacing adoption metrics for financial advisors.</p>
+            <div class="pill-row"><span>Python</span><span>gRPC</span><span>Redis</span><span>Airflow</span></div>
+          </div>
+          <div class="project-story">
+            <p><strong>Problem.</strong> Advisors lacked unified product adoption telemetry.</p>
+            <p><strong>Solution.</strong> Built ingestion workers, feature-store hydration, and schema-first APIs.</p>
+            <p><strong>Outcome.</strong> Unified signal reduced dashboard load time by 42% and unblocked product betas.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta">
+            <p class="mono">02 · Client</p>
+            <h3>teresafostertherapy.com</h3>
+            <p class="muted">Minimal, reassuring therapy site shipped end-to-end.</p>
+            <div class="pill-row"><span>Next.js</span><span>TypeScript</span><span>Vercel</span></div>
+          </div>
+          <div class="project-story">
+            <p><strong>Problem.</strong> Create a calming digital presence for a private practice.</p>
+            <p><strong>Solution.</strong> Built a performant static site with calming motion and clear calls to book.</p>
+            <p><strong>Outcome.</strong> Launched in 2 weeks, improved booking requests with a 1.9s LCP.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta">
+            <p class="mono">03 · Personal</p>
+            <h3>Distributed data toolkit</h3>
+            <p class="muted">Experimentation playground for streaming ETL and ML feature delivery.</p>
+            <div class="pill-row"><span>Python</span><span>Kafka</span><span>dbt</span><span>Docker</span></div>
+          </div>
+          <div class="project-story">
+            <p><strong>Problem.</strong> Slow feedback loops on data product prototypes.</p>
+            <p><strong>Solution.</strong> Built reproducible local clusters with golden-path scripts and synthetic datasets.</p>
+            <p><strong>Outcome.</strong> Cut prototyping time to hours, enabling faster stakeholder demos.</p>
           </div>
         </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Stats Section -->
-  <section class="scroll-section section-dark">
-    <div class="section-content">
-      <h2 class="section-headline">Measurable impact.</h2>
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-number">60%</div>
-          <div class="stat-label">Faster data prep</div>
+    <section class="panel systems" id="systems" data-section="Systems kit">
+      <div class="section-header">
+        <p class="eyebrow">Systems toolkit</p>
+        <h2>Infrastructure, craft, and delivery discipline.</h2>
+        <p class="lede">Calm gradients, soft shadows, and editorial typography frame the stack and process.</p>
+      </div>
+      <div class="systems-grid">
+        <div class="system-card">
+          <p class="mono">Core stack</p>
+          <ul>
+            <li>Python, Java, TypeScript</li>
+            <li>FastAPI, Spring Boot, gRPC</li>
+            <li>Kafka, Redis, PostgreSQL</li>
+            <li>Airflow, dbt, Spark</li>
+          </ul>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">35%</div>
-          <div class="stat-label">Reduced MTTR</div>
+        <div class="system-card">
+          <p class="mono">Engineering rituals</p>
+          <ul>
+            <li>Observability-first SLOs</li>
+            <li>Progressive delivery + feature flags</li>
+            <li>Chaos-friendly incident playbooks</li>
+            <li>Performance budgets for every service</li>
+          </ul>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">$1.2M</div>
-          <div class="stat-label">Revenue protected</div>
+        <div class="system-card">
+          <p class="mono">Experience layer</p>
+          <ul>
+            <li>Command palette for fast navigation</li>
+            <li>Story mode for guided tours</li>
+            <li>Accessible focus, reduced motion support</li>
+            <li>Scroll-responsive diagrams and cards</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section class="scroll-section section-light" id="about">
-    <div class="section-content">
-      <div class="section-eyebrow">About Me</div>
-      <h2 class="section-headline">Engineering with a product lens.</h2>
-      <p class="section-description">Currently at Vanguard's Technology Leadership Program, I bridge software engineering and data science. I design systems that are observable by default, build data stories decision-makers trust, and ship features that actually get used.</p>
-      <p class="section-description">Based in Indiana, open to remote opportunities with teams building the next generation of data platforms and AI-powered products.</p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="scroll-section" id="contact" style="background: #fff; min-height: 60vh;">
-    <div class="section-content">
-      <h2 class="section-headline">Let's build something great.</h2>
-      <p class="section-description">Reach out for roles, collaborations, or to discuss data engineering and AI.</p>
-      <div class="cta-buttons">
-        <a href="mailto:jackfoster246@gmail.com" class="btn btn-primary">Email me</a>
-        <a href="assets/Jack_Foster_Resume.pdf" class="btn btn-secondary">Download resume</a>
+    <section class="panel deliverables" id="deliverables" data-section="Design system">
+      <div class="section-header">
+        <p class="eyebrow">Design ops</p>
+        <h2>Complete portfolio specification.</h2>
+        <p class="lede">Everything needed to ship and scale the experience.</p>
       </div>
-    </div>
-  </section>
+      <div class="deliverables-grid">
+        <div>
+          <h3>Sitemap & structure</h3>
+          <ul>
+            <li>Landing → Chapters → Vanguard case → Projects → Systems toolkit → Deliverables → Contact</li>
+            <li>Command palette jump targets for every section</li>
+            <li>Story mode auto-advances through the same flow</li>
+          </ul>
+        </div>
+        <div>
+          <h3>UI system</h3>
+          <ul>
+            <li>Typography: DM Serif Display (headlines) + Space Grotesk (body)</li>
+            <li>Colors: oyster (#f6f4f0), charcoal (#0d0f14), accent blue (#7da6ff), amber glow</li>
+            <li>Grid: 12-col fluid, 1200px max width, 32px gutters</li>
+            <li>Components: hero tiles, chapter cards, case data viz, command palette, pill tags, buttons</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Interaction spec</h3>
+          <ul>
+            <li>Soft cubic-bezier easing (0.22, 0.61, 0.36, 1)</li>
+            <li>Fade+scale reveals on scroll, subtle rotation drift on cards</li>
+            <li>Magnetic hover on buttons, glow on active cards</li>
+            <li>Reduced motion: disables transforms, keeps color transitions only</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Responsive</h3>
+          <ul>
+            <li>Breakpoints: 1200 / 992 / 768 / 540</li>
+            <li>Stacked hero and single-column chapters on mobile</li>
+            <li>Command palette and story mode accessible with keyboard</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Accessibility</h3>
+          <ul>
+            <li>Focus-visible outlines, ARIA labels, semantic headings</li>
+            <li>Color contrast tuned for WCAG AA on primary surfaces</li>
+            <li>Skip heavy motion when prefers-reduced-motion is enabled</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Frontend build plan</h3>
+          <ul>
+            <li>Static site, GSAP for motion, progressive enhancement</li>
+            <li>Lazy-load imagery, prefetch fonts, GPU-accelerated transforms</li>
+            <li>Command palette data-driven; extendable to fetch CMS content</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <ul class="footer-links">
-        <li><a href="https://github.com/simplyjackfoster">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/jack-foster-98466a9a/">LinkedIn</a></li>
-        <li><a href="https://twitter.com/jackfoster246">Twitter</a></li>
-        <li><a href="mailto:jackfoster246@gmail.com">Email</a></li>
-      </ul>
-      <p class="footer-copyright">© 2024 Jack Foster. All rights reserved.</p>
+    <section class="panel contact" id="contact" data-section="Contact">
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build the next chapter.</h2>
+        <p class="lede">Available for backend leadership, API design, and data platform work. Remote-first.</p>
+        <div class="cta-row">
+          <a class="primary" href="mailto:jackfoster246@gmail.com">Email Jack</a>
+          <a class="ghost" href="https://www.linkedin.com/in/jack-foster-98466a9a/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="ghost" href="https://github.com/simplyjackfoster" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="command-palette" id="command-palette" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="palette-inner">
+      <div class="palette-top">
+        <input type="text" id="command-input" placeholder="Jump to a section or project" aria-label="Command palette input" autocomplete="off">
+        <button class="ghost" id="palette-close" aria-label="Close command palette">Esc</button>
+      </div>
+      <ul class="palette-list" id="palette-list"></ul>
     </div>
-  </footer>
+  </div>
+
+  <div class="story-indicator" id="story-indicator" aria-live="polite">
+    Story mode: <span id="story-step">Idle</span>
+  </div>
 
   <script>
-    // Register ScrollTrigger
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animate scroll sections
-    const sections = document.querySelectorAll('.scroll-section');
-    
-    sections.forEach(section => {
+    const sections = document.querySelectorAll('.panel');
+    const navStatus = document.getElementById('nav-status-text');
+    sections.forEach((section, index) => {
+      const delay = prefersReducedMotion ? 0 : index * 0.05;
       gsap.fromTo(section,
-        {
-          opacity: 0,
-          y: 60
-        },
+        { opacity: 0, y: prefersReducedMotion ? 0 : 70, rotateX: prefersReducedMotion ? 0 : 6 },
         {
           opacity: 1,
           y: 0,
+          rotateX: 0,
           duration: 1,
+          delay,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: section,
             start: 'top 80%',
-            end: 'top 20%',
-            toggleActions: 'play none none none'
+            onEnter: () => navStatus.textContent = section.dataset.section,
+            onEnterBack: () => navStatus.textContent = section.dataset.section,
+            toggleActions: 'play none none reverse'
           }
         }
       );
     });
 
-    // Animate project cards individually
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach((card, index) => {
-      gsap.fromTo(card,
-        {
-          opacity: 0,
-          y: 40
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          delay: index * 0.2,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 85%',
-            toggleActions: 'play none none none'
-          }
-        }
-      );
-    });
-
-    // Animate stats
-    const stats = document.querySelectorAll('.stat-item');
-    
-    stats.forEach((stat, index) => {
-      gsap.fromTo(stat,
-        {
-          opacity: 0,
-          scale: 0.8
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.6,
-          delay: index * 0.1,
-          ease: 'back.out(1.2)',
-          scrollTrigger: {
-            trigger: stat,
-            start: 'top 85%',
-            toggleActions: 'play none none none'
-          }
-        }
-      );
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+    // Case study bars
+    document.querySelectorAll('.bar').forEach(bar => {
+      const fill = bar.querySelector('.bar-fill');
+      const target = bar.dataset.height;
+      gsap.set(fill, { height: 0 });
+      gsap.to(fill, {
+        height: prefersReducedMotion ? target : `${target}%`,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: bar,
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
         }
       });
+    });
+
+    // Command palette
+    const palette = document.getElementById('command-palette');
+    const paletteList = document.getElementById('palette-list');
+    const paletteInput = document.getElementById('command-input');
+    const paletteClose = document.getElementById('palette-close');
+    const paletteTrigger = document.getElementById('cmdk-trigger');
+
+    const paletteItems = [
+      { label: 'Hero', target: '#hero' },
+      { label: 'Scroll chapters', target: '#chapters' },
+      { label: 'Vanguard impact', target: '#vanguard' },
+      { label: 'Projects', target: '#projects' },
+      { label: 'Systems toolkit', target: '#systems' },
+      { label: 'Deliverables', target: '#deliverables' },
+      { label: 'Contact', target: '#contact' },
+      { label: 'Command palette', target: '#command-palette' }
+    ];
+
+    function renderPalette(filter = '') {
+      paletteList.innerHTML = '';
+      paletteItems
+        .filter(item => item.label.toLowerCase().includes(filter.toLowerCase()))
+        .forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item.label;
+          li.tabIndex = 0;
+          li.addEventListener('click', () => jumpTo(item.target));
+          li.addEventListener('keydown', (e) => { if (e.key === 'Enter') jumpTo(item.target); });
+          paletteList.appendChild(li);
+        });
+    }
+
+    function openPalette() {
+      palette.classList.add('visible');
+      renderPalette();
+      paletteInput.value = '';
+      paletteInput.focus();
+    }
+
+    function closePalette() {
+      palette.classList.remove('visible');
+      paletteInput.blur();
+    }
+
+    function jumpTo(target) {
+      const el = document.querySelector(target);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      closePalette();
+    }
+
+    paletteInput.addEventListener('input', (e) => renderPalette(e.target.value));
+    paletteClose.addEventListener('click', closePalette);
+    paletteTrigger.addEventListener('click', openPalette);
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        openPalette();
+      } else if (e.key === 'Escape') {
+        closePalette();
+      }
+    });
+
+    // Story mode
+    const storyButton = document.getElementById('story-mode');
+    const storyIndicator = document.getElementById('story-indicator');
+    const storyStep = document.getElementById('story-step');
+    const storyTargets = ['#hero', '#chapters', '#vanguard', '#projects', '#systems', '#deliverables', '#contact'];
+    let storyTimeout;
+
+    function playStory(index = 0) {
+      if (index >= storyTargets.length) {
+        storyStep.textContent = 'Complete';
+        return;
+      }
+      storyStep.textContent = `${index + 1} / ${storyTargets.length}`;
+      const target = document.querySelector(storyTargets[index]);
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      storyTimeout = setTimeout(() => playStory(index + 1), prefersReducedMotion ? 1000 : 2000);
+    }
+
+    storyButton.addEventListener('click', () => {
+      clearTimeout(storyTimeout);
+      playStory();
+    });
+
+    // Magnetic buttons
+    document.querySelectorAll('button.primary, a.primary').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.05}px, ${y * 0.05}px)`;
+      });
+      btn.addEventListener('mouseleave', () => btn.style.transform = 'translate(0,0)');
     });
   </script>
 </body>

@@ -11,36 +11,42 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="bg-gradient"></div>
-  <div class="bg-spot one"></div>
-  <div class="bg-spot two"></div>
-  <header class="nav">
-    <div class="brand">
-      <span class="brand__primary">Jack Foster</span>
-      <span class="brand__secondary">Software & Data Engineering</span>
-    </div>
-    <nav class="links">
-      <a href="#about">About</a>
-      <a href="#skills">Stack</a>
-      <a href="#projects">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#ai-data">AI + Data</a>
-      <a class="pill" href="#contact">Contact</a>
-    </nav>
-  </header>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-spot one"></div>
+    <div class="bg-spot two"></div>
+    <header class="nav">
+      <div class="brand">
+        <span class="brand__primary">Jack Foster</span>
+        <span class="brand__secondary">Software & Data Engineering</span>
+      </div>
+      <div class="context">Currently viewing <span id="context-label">Intro</span></div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Stack</a>
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#ai-data">AI + Data</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
+      <button class="icon-btn" id="palette-trigger" aria-label="Open command palette (Ctrl/Cmd + K)">
+        <span class="icon-dot"></span>
+        <span class="icon-dot"></span>
+        <span class="icon-dot"></span>
+      </button>
+    </header>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="hero__content panel">
-        <div class="eyebrow">Software Engineer · Data Engineer · Fintech + AI</div>
-        <h1>Building reliable data systems and clear products that feel effortless.</h1>
-        <p class="lede">I'm Jack Foster, currently at Vanguard. I design and build clean engineering solutions, analytics pipelines, and AI-driven tooling for real estate and fintech teams.</p>
-        <div class="chip-row">
-          <span class="chip">Data Platforms</span>
-          <span class="chip">LLM Agents</span>
-          <span class="chip">Observability</span>
-          <span class="chip">Product Thinking</span>
+    <main>
+      <section class="hero" id="top">
+        <div class="hero__content panel">
+          <div class="eyebrow">Software Engineer · Data Engineer · Fintech + AI</div>
+          <h1 data-animate>Building reliable data systems and clear products that feel effortless.</h1>
+          <p class="lede" data-animate>I'm Jack Foster, currently at Vanguard. I design and build clean engineering solutions, analytics pipelines, and AI-driven tooling for real estate and fintech teams.</p>
+          <div class="chip-row">
+            <span class="chip">Data Platforms</span>
+            <span class="chip">LLM Agents</span>
+            <span class="chip">Observability</span>
+            <span class="chip">Product Thinking</span>
         </div>
         <div class="cta-group">
           <a class="btn primary" href="mailto:jackfoster246@gmail.com">Email</a>
@@ -65,10 +71,10 @@
             <p>Big Tech or startup roles in data/ML platforms.</p>
           </div>
         </div>
-      </div>
-      <div class="hero__visual">
-        <div class="card depth">
-          <div class="card__title">Signal over noise</div>
+        </div>
+        <div class="hero__visual">
+          <div class="card depth">
+            <div class="card__title">Signal over noise</div>
           <div class="sparkline">
             <div class="bar" style="height: 30%"></div>
             <div class="bar" style="height: 80%"></div>
@@ -105,7 +111,7 @@
       <div class="section__header">
         <p class="eyebrow">About</p>
         <h2>Thoughtful engineering with a product lens.</h2>
-        <p class="lede narrow">I bridge software engineering and data science. At Vanguard, I move from backend services to analytics—wrangling cloud data, designing observability, and partnering with stakeholders to ship features that actually get used.</p>
+        <p class="lede narrow" data-animate>I bridge software engineering and data science. At Vanguard, I move from backend services to analytics—wrangling cloud data, designing observability, and partnering with stakeholders to ship features that actually get used.</p>
       </div>
       <div class="about-grid">
         <div class="about-card">
@@ -123,6 +129,18 @@
         <div class="about-card">
           <h3>Location</h3>
           <p>Indiana, USA · open to remote + hybrid opportunities.</p>
+        </div>
+        <div class="about-card behind" aria-live="polite">
+          <div class="toggle-row">
+            <h3>Behind the scenes</h3>
+            <button class="text-btn" id="behind-toggle">Show drafts</button>
+          </div>
+          <p class="behind-copy">Sketches, scrappy diagrams, and draft notes for upcoming data stories.</p>
+          <ul class="hidden-list" id="behind-list">
+            <li>Diagram of AI Ops agent routing CloudWatch signals to LLM summaries.</li>
+            <li>Paper sketch of Vanguard advisor insights dashboard navigation.</li>
+            <li>Prototype frames for teresafostertherapy.com refresh.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -179,8 +197,8 @@
         <h2>Selected builds with measurable impact.</h2>
         <p class="lede narrow">Each project pairs crisp engineering with a clear narrative—problem, solution, and impact.</p>
       </div>
-      <div class="project-grid">
-        <article class="project-card">
+      <div class="project-stack" aria-live="polite">
+        <article class="project-card" data-animate>
           <div class="thumb gradient"></div>
           <div class="project-content">
             <div class="project-header">
@@ -198,10 +216,14 @@
               <li>Forecast MAE improved by 14% after feature drift monitoring.</li>
               <li>Edge-deployed tiles enable sub-second map interactions.</li>
             </ul>
+            <div class="project-actions">
+              <button class="text-btn" data-story-launch="estate">Story Mode</button>
+              <button class="text-btn" data-case-jump="#experience">Jump to experience</button>
+            </div>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-animate>
           <div class="thumb gradient dusk"></div>
           <div class="project-content">
             <div class="project-header">
@@ -219,10 +241,14 @@
               <li>Auto-tickets high-confidence incidents with guardrails.</li>
               <li>Shipped micro-interactions for transparent LLM steps.</li>
             </ul>
+            <div class="project-actions">
+              <button class="text-btn" data-story-launch="aiops">Story Mode</button>
+              <button class="text-btn" data-case-jump="#ai-data">AI + data work</button>
+            </div>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-animate>
           <div class="thumb gradient night"></div>
           <div class="project-content">
             <div class="project-header">
@@ -240,6 +266,10 @@
               <li>Identified $1.2M in at-risk revenue via cohort drop detection.</li>
               <li>Documentation-as-UI: tooltips, lineage, and scenario notes.</li>
             </ul>
+            <div class="project-actions">
+              <button class="text-btn" data-story-launch="fintech">Story Mode</button>
+              <button class="text-btn" data-case-jump="#contact">Get in touch</button>
+            </div>
           </div>
         </article>
       </div>
@@ -332,5 +362,232 @@
       <footer class="footer">Crafted with clean engineering · Updated for Big Tech + startup recruiters.</footer>
     </section>
   </main>
+
+  <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="palette__panel">
+      <div class="palette__header">
+        <p class="eyebrow">Command</p>
+        <button class="text-btn" id="palette-close" aria-label="Close command palette">Esc</button>
+      </div>
+      <input type="text" id="palette-input" class="palette__input" placeholder="Search sections, projects, or commands" aria-label="Command input">
+      <ul class="palette__list" role="listbox" id="palette-list"></ul>
+    </div>
+  </div>
+
+  <div class="story" id="story" role="dialog" aria-modal="true" aria-label="Story mode">
+    <div class="story__panel">
+      <div class="story__header">
+        <div>
+          <p class="eyebrow" id="story-label">Story Mode</p>
+          <h3 id="story-title">Project narrative</h3>
+        </div>
+        <div class="story__controls">
+          <button class="text-btn" id="story-prev" aria-label="Previous step">Prev</button>
+          <button class="text-btn" id="story-play" aria-label="Play story">Play</button>
+          <button class="text-btn" id="story-next" aria-label="Next step">Next</button>
+          <button class="text-btn" id="story-close" aria-label="Close story">Close</button>
+        </div>
+      </div>
+      <div class="story__progress">
+        <div class="story__progress-fill" id="story-progress"></div>
+      </div>
+      <div class="story__content" id="story-content"></div>
+    </div>
+  </div>
+
+  <script>
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const animateEls = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('in-view');
+      });
+    }, { threshold: 0.4 });
+    animateEls.forEach((el) => observer.observe(el));
+
+    const sections = document.querySelectorAll('section');
+    const contextLabel = document.getElementById('context-label');
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const label = entry.target.querySelector('h2')?.textContent || 'Section';
+          contextLabel.textContent = label;
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach((section) => sectionObserver.observe(section));
+
+    const behindToggle = document.getElementById('behind-toggle');
+    const behindList = document.getElementById('behind-list');
+    behindToggle?.addEventListener('click', () => {
+      const expanded = behindList.classList.toggle('visible');
+      behindToggle.textContent = expanded ? 'Hide drafts' : 'Show drafts';
+    });
+
+    const palette = document.getElementById('palette');
+    const paletteTrigger = document.getElementById('palette-trigger');
+    const paletteClose = document.getElementById('palette-close');
+    const paletteInput = document.getElementById('palette-input');
+    const paletteList = document.getElementById('palette-list');
+    const commands = [
+      { label: 'Go to About', action: () => document.getElementById('about').scrollIntoView({ behavior: 'smooth' }) },
+      { label: 'Go to Stack', action: () => document.getElementById('skills').scrollIntoView({ behavior: 'smooth' }) },
+      { label: 'Go to Projects', action: () => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }) },
+      { label: 'Go to Experience', action: () => document.getElementById('experience').scrollIntoView({ behavior: 'smooth' }) },
+      { label: 'Go to AI + Data', action: () => document.getElementById('ai-data').scrollIntoView({ behavior: 'smooth' }) },
+      { label: 'Contact Jack', action: () => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }) },
+      { label: 'GitHub', action: () => window.open('https://github.com/simplyjackfoster', '_blank') },
+      { label: 'LinkedIn', action: () => window.open('https://www.linkedin.com/in/jack-foster-98466a9a/', '_blank') },
+    ];
+
+    function openPalette() {
+      palette.classList.add('visible');
+      paletteInput.value = '';
+      renderPalette(commands);
+      paletteInput.focus();
+    }
+    function closePalette() {
+      palette.classList.remove('visible');
+      paletteInput.blur();
+    }
+    function renderPalette(list) {
+      paletteList.innerHTML = '';
+      list.forEach((cmd, index) => {
+        const li = document.createElement('li');
+        li.textContent = cmd.label;
+        li.tabIndex = 0;
+        li.setAttribute('role', 'option');
+        li.addEventListener('click', cmd.action);
+        li.addEventListener('keydown', (e) => { if (e.key === 'Enter') cmd.action(); });
+        if (index === 0) li.classList.add('active');
+        paletteList.appendChild(li);
+      });
+    }
+    paletteInput?.addEventListener('input', (e) => {
+      const value = e.target.value.toLowerCase();
+      const filtered = commands.filter((cmd) => cmd.label.toLowerCase().includes(value));
+      renderPalette(filtered.length ? filtered : commands);
+    });
+    paletteTrigger?.addEventListener('click', openPalette);
+    paletteClose?.addEventListener('click', closePalette);
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        palette.classList.contains('visible') ? closePalette() : openPalette();
+      }
+      if (e.key === 'Escape' && palette.classList.contains('visible')) closePalette();
+    });
+
+    const stories = {
+      estate: {
+        title: 'Real-Estate Analytics Platform',
+        label: 'Context → Goals → Results',
+        steps: [
+          'Context: Zillow + census data unified, drift monitored; aligned with advisor insight needs.',
+          'Goals: metrics-first dashboards, sub-second map interactions, transparent feature lineage.',
+          'Choices: Spark jobs with Glue catalog, edge-deployed tiles, dbt documentation as UI tooltips.',
+          'Results: 60% faster prep time, 14% better MAE, adoption via narrative tooltips + story mode.',
+        ],
+      },
+      aiops: {
+        title: 'AI Ops Agent for CloudWatch',
+        label: 'Signals → Summaries → Guardrails',
+        steps: [
+          'Context: noisy logs slowing MTTR; on-call needed condensed next actions.',
+          'Goals: short actionable briefs, routed ownership, automated tickets with review gates.',
+          'Choices: Lambda worker + OpenSearch context, LLM trace UI, fallback runbooks.',
+          'Results: 35% MTTR reduction, clearer root-cause handoffs, safer auto-remediation.',
+        ],
+      },
+      fintech: {
+        title: 'Fintech Spend Intelligence',
+        label: 'Cohorts → Trends → Actions',
+        steps: [
+          'Context: finance teams lacked cohesive merchant health visuals; cash flow volatility hidden.',
+          'Goals: anomaly detection, cohort drops, and exec-ready visuals tied to data contracts.',
+          'Choices: Airflow orchestration, dbt models with tests, Tableau deck with inline lineage.',
+          'Results: 20+ visuals for monthly reviews, $1.2M at-risk revenue identified early.',
+        ],
+      },
+    };
+
+    const story = document.getElementById('story');
+    const storyTitle = document.getElementById('story-title');
+    const storyLabel = document.getElementById('story-label');
+    const storyContent = document.getElementById('story-content');
+    const storyProgress = document.getElementById('story-progress');
+    const storyPrev = document.getElementById('story-prev');
+    const storyNext = document.getElementById('story-next');
+    const storyPlay = document.getElementById('story-play');
+    const storyClose = document.getElementById('story-close');
+    let currentStory = null;
+    let stepIndex = 0;
+    let autoplayInterval = null;
+
+    function renderStory() {
+      if (!currentStory) return;
+      storyTitle.textContent = currentStory.title;
+      storyLabel.textContent = currentStory.label;
+      storyContent.textContent = currentStory.steps[stepIndex];
+      const progress = ((stepIndex + 1) / currentStory.steps.length) * 100;
+      storyProgress.style.width = `${progress}%`;
+    }
+
+    function openStory(key) {
+      currentStory = stories[key];
+      stepIndex = 0;
+      story.classList.add('visible');
+      renderStory();
+      if (!prefersReducedMotion) startAutoplay();
+    }
+
+    function closeStory() {
+      story.classList.remove('visible');
+      stopAutoplay();
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayInterval = setInterval(() => {
+        stepIndex = (stepIndex + 1) % currentStory.steps.length;
+        renderStory();
+      }, 2300);
+      storyPlay.textContent = 'Pause';
+    }
+    function stopAutoplay() {
+      if (autoplayInterval) clearInterval(autoplayInterval);
+      autoplayInterval = null;
+      storyPlay.textContent = 'Play';
+    }
+
+    document.querySelectorAll('[data-story-launch]').forEach((btn) => {
+      btn.addEventListener('click', () => openStory(btn.dataset.storyLaunch));
+    });
+    storyPrev.addEventListener('click', () => {
+      if (!currentStory) return;
+      stepIndex = (stepIndex - 1 + currentStory.steps.length) % currentStory.steps.length;
+      renderStory();
+    });
+    storyNext.addEventListener('click', () => {
+      if (!currentStory) return;
+      stepIndex = (stepIndex + 1) % currentStory.steps.length;
+      renderStory();
+    });
+    storyPlay.addEventListener('click', () => {
+      if (!currentStory) return;
+      autoplayInterval ? stopAutoplay() : startAutoplay();
+    });
+    storyClose.addEventListener('click', closeStory);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && story.classList.contains('visible')) closeStory();
+    });
+
+    document.querySelectorAll('[data-case-jump]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = document.querySelector(btn.dataset.caseJump);
+        target?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>

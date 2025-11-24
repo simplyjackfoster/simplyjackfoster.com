@@ -3,412 +3,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jack Foster | Backend Engineer</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>Jack Foster</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="grain"></div>
-  <header class="nav-shell">
-    <div class="nav">
-      <div class="nav-left">
-        <div class="logo-mark" aria-hidden="true"></div>
-        <div class="nav-title">
-          <span class="small">Jack Foster</span>
-          <span class="context-label" id="context-label">Backend Engineer</span>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-content">
+      <div class="nav-logo">Jack Foster</div>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero-title">Hi, I'm Jack.</h1>
+    <p class="hero-subtitle">Product-Focused Software Engineer &amp; Data Engineer.</p>
+    <p class="hero-description">Building intelligent systems and beautiful data products that transform complexity into clarity.</p>
+    <div class="cta-buttons">
+      <a href="#work" class="btn btn-primary">View my work</a>
+      <a href="mailto:jackfoster246@gmail.com" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Feature Section 1 -->
+  <section class="scroll-section section-dark">
+    <div class="section-content">
+      <div class="section-eyebrow">Engineering Excellence</div>
+      <h2 class="section-headline">Building intelligent systems that scale.</h2>
+      <p class="section-description">From data pipelines processing millions of records to AI-powered automation tools, I create solutions that are both powerful and elegant.</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Lightning Fast</h3>
+          <p class="feature-text">Optimized data pipelines that process millions of records with sub-second latency.</p>
         </div>
-      </div>
-      <div class="nav-center">
-        <a href="#chapters" class="nav-link">Chapters</a>
-        <a href="#projects" class="nav-link">Work</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-      <div class="nav-right">
-        <button class="ghost" id="story-toggle">Story mode</button>
-        <button class="primary" id="command-toggle" aria-label="Open command palette">⌘K</button>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3 class="feature-title">Precision Built</h3>
+          <p class="feature-text">Every system designed with observability, reliability, and maintainability in mind.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3 class="feature-title">Production Ready</h3>
+          <p class="feature-text">Ship with confidence. Clean architecture, comprehensive testing, CI/CD integration.</p>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="hero-copy">
-        <p class="eyebrow">Backend systems • APIs • Financial analytics</p>
-        <h1>
-          <span class="serif">Cinematic engineering</span>
-          <span class="line"></span>
-          <span class="headline">I design and ship resilient backends powering advisor insights at Vanguard.</span>
-        </h1>
-        <p class="lede">Python-first engineer with a taste for reliable systems, expressive APIs, and quietly opinionated UX. I translate product intent into measurable outcomes—whether it's advisor analytics for Vanguard or bespoke client builds.</p>
-        <div class="hero-actions">
-          <a class="primary" href="#projects">View the work</a>
-          <a class="ghost" href="mailto:jackfoster246@gmail.com">Email Jack</a>
-        </div>
-        <div class="meta-grid">
-          <div>
-            <p class="label">Focus</p>
-            <p class="value">Backend platforms, data tooling, service design</p>
-          </div>
-          <div>
-            <p class="label">Toolchain</p>
-            <p class="value">Python • Java • Postgres • AWS • Spark • FastAPI</p>
-          </div>
-          <div>
-            <p class="label">Currently</p>
-            <p class="value">Portfolio & Product Insights, Vanguard</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="portrait-card">
-          <div class="portrait-ring"></div>
-          <div class="portrait">JF</div>
-          <div class="floating-chip">smooth delivery</div>
-          <div class="floating-chip alt">observability-first</div>
-        </div>
-        <div class="ambient-shapes" aria-hidden="true">
-          <div class="shape s1"></div>
-          <div class="shape s2"></div>
-          <div class="shape s3"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter" id="chapters">
-      <div class="chapter-header">
-        <p class="eyebrow">Choreographed chapters</p>
-        <h2>Backend storytelling, one scroll at a time.</h2>
-        <p class="lede">Each section resolves from a gentle blur into focus. Cards stack upward as you scroll, while atmospheric gradients drift slowly in the background.</p>
-      </div>
-      <div class="chapter-cards">
-        <article class="stack-card" data-label="Systems">
-          <div class="card-top">
-            <p class="mono">/01 Backend Systems</p>
-            <span class="pill">Resilient</span>
-          </div>
-          <h3>APIs shaped around product truth.</h3>
-          <p>Event-driven services, schema-first contracts, predictable latency budgets. Built for advisor workflows that cannot drop a frame.</p>
-        </article>
-        <article class="stack-card" data-label="Data">
-          <div class="card-top">
-            <p class="mono">/02 Data Tooling</p>
-            <span class="pill">Measured</span>
-          </div>
-          <h3>Analytics engines that stay trustworthy.</h3>
-          <p>Spark + Postgres + Airflow pipelines with disciplined observability. Data lineage, alerting, and bias checks baked in.</p>
-        </article>
-        <article class="stack-card" data-label="Delivery">
-          <div class="card-top">
-            <p class="mono">/03 Delivery</p>
-            <span class="pill">Intentional</span>
-          </div>
-          <h3>Ship cycles that honor quality.</h3>
-          <p>Predictive preloading, graceful degradation, and reduced-motion alternatives keep the experience calm at 60fps.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="chapter vanguard" id="vanguard">
-      <div class="chapter-header">
-        <p class="eyebrow">Vanguard • Portfolio & Product Insights</p>
-        <h2>Cinematic walkthrough of advisor analytics.</h2>
-        <p class="lede">Scroll-responsive data visualizations illuminate how backend signals power portfolio analysis for advisors. Context-aware headers keep you oriented.</p>
-      </div>
-      <div class="viz-grid">
-        <div class="viz-panel">
-          <div class="viz-label">Latency budget</div>
-          <div class="chart" aria-hidden="true">
-            <div class="bar" style="--v:70%"></div>
-            <div class="bar" style="--v:55%"></div>
-            <div class="bar" style="--v:82%"></div>
-            <div class="bar" style="--v:64%"></div>
-          </div>
-          <p class="caption">API response times stabilized across advisor regions after distributed caching and circuit breakers.</p>
-        </div>
-        <div class="viz-panel">
-          <div class="viz-label">Data trust</div>
-          <div class="chart-line" aria-hidden="true">
-            <span style="--i:0;--y:62%"></span>
-            <span style="--i:1;--y:54%"></span>
-            <span style="--i:2;--y:42%"></span>
-            <span style="--i:3;--y:33%"></span>
-            <span style="--i:4;--y:28%"></span>
-            <span style="--i:5;--y:20%"></span>
-          </div>
-          <p class="caption">Data quality incidents declined with lineage checks, contract tests, and automatic anomaly surfacing.</p>
-        </div>
-        <div class="viz-panel code">
-          <div class="viz-label">Service sketch</div>
-          <pre aria-label="Code snippet">@router.post("/advisor-insights")
-async def insights(req: InsightsRequest):
-    snapshot = await store.fetch(req.account_id)
-    signals = orchestrator.run(snapshot)
-    return Response(signals, cache=15)</pre>
-          <p class="caption">Python-first service surface tuned for predictable advisor performance.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter projects" id="projects">
-      <div class="chapter-header">
-        <p class="eyebrow">Selected work</p>
-        <h2>Projects that move metrics.</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card" data-label="Vanguard">
-          <div class="project-meta">
-            <p class="mono">Context → Advisor analytics</p>
-            <span class="pill">Backend</span>
-          </div>
-          <h3>Portfolio Signal Engine</h3>
-          <p>Distributed insights service aligning product analytics with advisor narratives. API design focused on composable intents and predictable SLAs.</p>
-          <ul>
-            <li>Python, FastAPI, Postgres, AWS</li>
-            <li>Signal orchestration with feature flags and circuit breaking</li>
-            <li>Measurable: -32% response variance, +18% advisor engagement</li>
-          </ul>
-          <div class="links">
-            <span>Vanguard • private</span>
-          </div>
-        </article>
-        <article class="project-card" data-label="Systems">
-          <div class="project-meta">
-            <p class="mono">Context → Reliability</p>
-            <span class="pill">APIs</span>
-          </div>
-          <h3>Observability-first API mesh</h3>
-          <p>Service mesh patterns that keep advisor and internal tools observable by default, with structured logging and proactive rollback paths.</p>
-          <ul>
-            <li>Python, Java, OpenTelemetry, Grafana</li>
-            <li>Golden signals: latency, errors, saturation, throughput</li>
-            <li>Measurable: 40% faster incident triage</li>
-          </ul>
-          <div class="links">
-            <span>Internal • case notes</span>
-          </div>
-        </article>
-        <article class="project-card" data-label="Client">
-          <div class="project-meta">
-            <p class="mono">Context → Client build</p>
-            <span class="pill">Full-stack</span>
-          </div>
-          <h3>teresafostertherapy.com</h3>
-          <p>Minimal, calming site for a private practice. Fast, accessible, SEO-ready, with handcrafted layouts and responsive typography.</p>
-          <ul>
-            <li>Next.js, Tailwind, Vercel</li>
-            <li>Performance tuned, zero JavaScript blocking</li>
-            <li>Outcome: bookings uplift and clear brand voice</li>
-          </ul>
-          <div class="links">
-            <a href="https://teresafostertherapy.com" target="_blank" rel="noreferrer">Visit live site</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="chapter about" id="about">
-      <div class="chapter-header">
-        <p class="eyebrow">About Jack</p>
-        <h2>Product-minded backend engineer.</h2>
-        <p class="lede">Based in Indiana. Comfortable in Python and Java. Speaks design language, obsesses over reliability, and ships with empathy for advisors and operators alike.</p>
-      </div>
-      <div class="about-grid">
-        <div class="about-card">
-          <p class="mono">Profile</p>
-          <p>Vanguard Technology Leadership Program alum building the Portfolio & Product Insights platform. Bridges backend rigor with human-friendly UX.</p>
-        </div>
-        <div class="about-card">
-          <p class="mono">Values</p>
-          <p>Measurable outcomes, clear contracts, observability by default, and calm handoffs that respect downstream teams.</p>
-        </div>
-        <div class="about-card">
-          <p class="mono">Recent focus</p>
-          <p>Signal orchestration, schema evolution, resilient caching, and guided experiences for advisor storytelling.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter contact" id="contact">
-      <div class="chapter-header">
-        <p class="eyebrow">Contact</p>
-        <h2>Let’s design reliable systems together.</h2>
-        <p class="lede">Open to collaborations, roles, and technical deep dives.</p>
-      </div>
-      <div class="contact-actions">
-        <a class="primary" href="mailto:jackfoster246@gmail.com">Email Jack</a>
-        <a class="ghost" href="assets/Jack_Foster_Resume.pdf">Download resume</a>
-      </div>
-    </section>
-  </main>
-
-  <div class="command-palette" id="command-palette" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="command-inner" role="document">
-      <div class="command-header">
-        <input type="text" id="command-input" placeholder="Jump to section or project" aria-label="Command search">
-        <button class="ghost" id="command-close" aria-label="Close command palette">✕</button>
-      </div>
-      <ul class="command-list" id="command-list"></ul>
+  <!-- Feature Section 2 -->
+  <section class="scroll-section section-light">
+    <div class="section-content">
+      <div class="section-eyebrow">Data Intelligence</div>
+      <h2 class="section-headline">Real estate analytics that actually make sense.</h2>
+      <p class="section-description">Transform raw market data into actionable insights. Built with AWS, Spark, and modern ML frameworks to forecast trends and identify opportunities.</p>
     </div>
-  </div>
+  </section>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>© 2024 Jack Foster — Backend engineer crafting calm, cinematic systems.</p>
-      <div class="footer-links">
-        <a href="https://github.com/simplyjackfoster">GitHub</a>
-        <a href="https://www.linkedin.com/in/jack-foster-98466a9a/">LinkedIn</a>
-        <a href="https://twitter.com/jackfoster246">Twitter</a>
-        <a href="mailto:jackfoster246@gmail.com">Email</a>
+  <!-- Projects Section -->
+  <section class="scroll-section" id="work" style="background: #fff;">
+    <div class="section-content">
+      <div class="section-eyebrow">Selected Work</div>
+      <h2 class="section-headline">Projects that make an impact.</h2>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">📊</div>
+          <div class="project-content">
+            <h3 class="project-title">Real Estate Analytics Platform</h3>
+            <p class="project-description">Comprehensive data pipeline ingesting Zillow and census data with predictive modeling for property values. Reduced analyst prep time by 60%.</p>
+            <div class="project-tags">
+              <span class="tag">AWS Glue</span>
+              <span class="tag">Spark</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">React</span>
+            </div>
+            <a href="#" class="project-link">Learn more →</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">🤖</div>
+          <div class="project-content">
+            <h3 class="project-title">AI Ops Agent</h3>
+            <p class="project-description">Intelligent agent that summarizes CloudWatch signals and suggests remediations. Cut mean-time-to-respond by 35%.</p>
+            <div class="project-tags">
+              <span class="tag">LLM Agents</span>
+              <span class="tag">Lambda</span>
+              <span class="tag">OpenSearch</span>
+              <span class="tag">TypeScript</span>
+            </div>
+            <a href="#" class="project-link">Learn more →</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">💰</div>
+          <div class="project-content">
+            <h3 class="project-title">Fintech Spend Intelligence</h3>
+            <p class="project-description">Data model and visualization suite surfacing merchant trends and customer health. Identified $1.2M in at-risk revenue.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Airflow</span>
+              <span class="tag">dbt</span>
+              <span class="tag">Tableau</span>
+            </div>
+            <a href="#" class="project-link">Learn more →</a>
+          </div>
+        </article>
       </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="scroll-section section-dark">
+    <div class="section-content">
+      <h2 class="section-headline">Measurable impact.</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">60%</div>
+          <div class="stat-label">Faster data prep</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">35%</div>
+          <div class="stat-label">Reduced MTTR</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">$1.2M</div>
+          <div class="stat-label">Revenue protected</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="scroll-section section-light" id="about">
+    <div class="section-content">
+      <div class="section-eyebrow">About Me</div>
+      <h2 class="section-headline">Engineering with a product lens.</h2>
+      <p class="section-description">Currently at Vanguard's Technology Leadership Program, I bridge software engineering and data science. I design systems that are observable by default, build data stories decision-makers trust, and ship features that actually get used.</p>
+      <p class="section-description">Based in Indiana, open to remote opportunities with teams building the next generation of data platforms and AI-powered products.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="scroll-section" id="contact" style="background: #fff; min-height: 60vh;">
+    <div class="section-content">
+      <h2 class="section-headline">Let's build something great.</h2>
+      <p class="section-description">Reach out for roles, collaborations, or to discuss data engineering and AI.</p>
+      <div class="cta-buttons">
+        <a href="mailto:jackfoster246@gmail.com" class="btn btn-primary">Email me</a>
+        <a href="assets/Jack_Foster_Resume.pdf" class="btn btn-secondary">Download resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="https://github.com/simplyjackfoster">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jack-foster-98466a9a/">LinkedIn</a></li>
+        <li><a href="https://twitter.com/jackfoster246">Twitter</a></li>
+        <li><a href="mailto:jackfoster246@gmail.com">Email</a></li>
+      </ul>
+      <p class="footer-copyright">© 2024 Jack Foster. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    const contextLabel = document.getElementById('context-label');
-    const chapters = document.querySelectorAll('.chapter, .hero');
-    chapters.forEach(section => {
-      ScrollTrigger.create({
-        trigger: section,
-        start: 'top center',
-        onEnter: () => contextLabel.textContent = section.querySelector('h2')?.textContent || 'Jack Foster',
-        onEnterBack: () => contextLabel.textContent = section.querySelector('h2')?.textContent || 'Jack Foster'
-      });
-    });
-
-    if (!prefersReducedMotion) {
-      gsap.utils.toArray('.chapter, .hero').forEach((section, i) => {
-        gsap.from(section, {
+    // Animate scroll sections
+    const sections = document.querySelectorAll('.scroll-section');
+    
+    sections.forEach(section => {
+      gsap.fromTo(section,
+        {
           opacity: 0,
-          y: 60,
-          filter: 'blur(6px)',
+          y: 60
+        },
+        {
+          opacity: 1,
+          y: 0,
           duration: 1,
-          ease: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: section,
-            start: 'top 80%'
+            start: 'top 80%',
+            end: 'top 20%',
+            toggleActions: 'play none none none'
           }
-        });
-      });
-
-      gsap.to('.ambient-shapes .shape', {
-        yPercent: (i) => (i + 1) * 8,
-        xPercent: (i) => (i % 2 === 0 ? 6 : -6),
-        duration: 8,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut'
-      });
-    }
-
-    // Magnetic hover
-    document.querySelectorAll('.primary, .ghost, .project-card').forEach(el => {
-      el.addEventListener('pointermove', (e) => {
-        const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        el.style.setProperty('--tilt-x', `${(y / rect.height) * 6}deg`);
-        el.style.setProperty('--tilt-y', `${(x / rect.width) * -6}deg`);
-      });
-      el.addEventListener('pointerleave', () => {
-        el.style.setProperty('--tilt-x', '0deg');
-        el.style.setProperty('--tilt-y', '0deg');
-      });
-    });
-
-    // Command palette
-    const palette = document.getElementById('command-palette');
-    const commandInput = document.getElementById('command-input');
-    const commandList = document.getElementById('command-list');
-    const commands = [
-      { label: 'Hero', target: '#top' },
-      { label: 'Chapters', target: '#chapters' },
-      { label: 'Vanguard analytics', target: '#vanguard' },
-      { label: 'Projects', target: '#projects' },
-      { label: 'About', target: '#about' },
-      { label: 'Contact', target: '#contact' },
-      { label: 'teresafostertherapy.com', target: '#projects' }
-    ];
-
-    function openPalette() {
-      palette.setAttribute('aria-hidden', 'false');
-      palette.classList.add('visible');
-      commandInput.focus();
-      renderCommands('');
-    }
-
-    function closePalette() {
-      palette.setAttribute('aria-hidden', 'true');
-      palette.classList.remove('visible');
-    }
-
-    function renderCommands(filter) {
-      commandList.innerHTML = '';
-      commands.filter(cmd => cmd.label.toLowerCase().includes(filter.toLowerCase()))
-        .forEach(cmd => {
-          const li = document.createElement('li');
-          li.textContent = cmd.label;
-          li.tabIndex = 0;
-          li.addEventListener('click', () => navigate(cmd.target));
-          li.addEventListener('keydown', (e) => { if (e.key === 'Enter') navigate(cmd.target); });
-          commandList.appendChild(li);
-        });
-    }
-
-    function navigate(target) {
-      closePalette();
-      const el = document.querySelector(target);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    document.getElementById('command-toggle').addEventListener('click', openPalette);
-    document.getElementById('command-close').addEventListener('click', closePalette);
-    commandInput.addEventListener('input', (e) => renderCommands(e.target.value));
-    palette.addEventListener('click', (e) => { if (e.target === palette) closePalette(); });
-
-    window.addEventListener('keydown', (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault();
-        palette.classList.contains('visible') ? closePalette() : openPalette();
-      }
-      if (e.key === 'Escape') closePalette();
-    });
-
-    // Story mode
-    const storyToggle = document.getElementById('story-toggle');
-    let storyInterval = null;
-    function startStory() {
-      const sections = Array.from(document.querySelectorAll('.hero, .chapter'));
-      let index = 0;
-      storyToggle.textContent = 'Stop story';
-      storyInterval = setInterval(() => {
-        if (index >= sections.length) {
-          stopStory();
-          return;
         }
-        sections[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
-        index += 1;
-      }, 3200);
-    }
+      );
+    });
 
-    function stopStory() {
-      storyToggle.textContent = 'Story mode';
-      if (storyInterval) clearInterval(storyInterval);
-      storyInterval = null;
-    }
+    // Animate project cards individually
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach((card, index) => {
+      gsap.fromTo(card,
+        {
+          opacity: 0,
+          y: 40
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: index * 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    });
 
-    storyToggle.addEventListener('click', () => {
-      if (storyInterval) {
-        stopStory();
-      } else {
-        startStory();
-      }
+    // Animate stats
+    const stats = document.querySelectorAll('.stat-item');
+    
+    stats.forEach((stat, index) => {
+      gsap.fromTo(stat,
+        {
+          opacity: 0,
+          scale: 0.8
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.6,
+          delay: index * 0.1,
+          ease: 'back.out(1.2)',
+          scrollTrigger: {
+            trigger: stat,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
     });
   </script>
 </body>

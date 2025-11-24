@@ -83,6 +83,26 @@ nav {
   letter-spacing: -0.015em;
   line-height: 1.05;
   margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#hero-typed {
+  min-height: 1.1em;
+}
+
+.typing-cursor {
+  width: 2px;
+  height: 1em;
+  background: var(--gray-900);
+  display: inline-block;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }
 
 .hero-subtitle {
@@ -221,8 +241,31 @@ nav {
 }
 
 .feature-icon {
-  font-size: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
+}
+
+.icon-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 20px;
+}
+
+.icon-compact {
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  font-size: 26px;
 }
 
 .feature-title {

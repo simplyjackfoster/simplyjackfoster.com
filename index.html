@@ -23,7 +23,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1 class="hero-title">Hi, I'm Jack.</h1>
+    <h1 class="hero-title"><span id="hero-typed" aria-live="polite"></span><span class="typing-cursor" aria-hidden="true"></span></h1>
     <p class="hero-subtitle">Product-Focused Software Engineer &amp; Data Engineer.</p>
     <p class="hero-description">Building intelligent systems and beautiful data products that transform complexity into clarity.</p>
     <div class="cta-buttons">
@@ -40,17 +40,17 @@
       <p class="section-description">From data pipelines processing millions of records to AI-powered automation tools, I create solutions that are both powerful and elegant.</p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
+          <div class="feature-icon" aria-hidden="true"><span class="icon-glyph">LF</span></div>
           <h3 class="feature-title">Lightning Fast</h3>
           <p class="feature-text">Optimized data pipelines that process millions of records with sub-second latency.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🎯</div>
+          <div class="feature-icon" aria-hidden="true"><span class="icon-glyph">PB</span></div>
           <h3 class="feature-title">Precision Built</h3>
           <p class="feature-text">Every system designed with observability, reliability, and maintainability in mind.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🚀</div>
+          <div class="feature-icon" aria-hidden="true"><span class="icon-glyph">PR</span></div>
           <h3 class="feature-title">Production Ready</h3>
           <p class="feature-text">Ship with confidence. Clean architecture, comprehensive testing, CI/CD integration.</p>
         </div>
@@ -76,7 +76,7 @@
       <div class="projects-grid">
         <!-- Project 1 -->
         <div class="project-card">
-          <div class="project-image">📊</div>
+          <div class="project-image"><span class="icon-glyph icon-compact">RE</span></div>
           <div class="project-content">
             <h3 class="project-title">Real Estate Analytics Platform</h3>
             <p class="project-description">Comprehensive data pipeline ingesting Zillow and census data with predictive modeling for property values. Reduced analyst prep time by 60%.</p>
@@ -92,7 +92,7 @@
 
         <!-- Project 2 -->
         <div class="project-card">
-          <div class="project-image">🤖</div>
+          <div class="project-image"><span class="icon-glyph icon-compact">AI</span></div>
           <div class="project-content">
             <h3 class="project-title">AI Ops Agent</h3>
             <p class="project-description">Intelligent agent that summarizes CloudWatch signals and suggests remediations. Cut mean-time-to-respond by 35%.</p>
@@ -108,7 +108,7 @@
 
         <!-- Project 3 -->
         <div class="project-card">
-          <div class="project-image">💰</div>
+          <div class="project-image"><span class="icon-glyph icon-compact">FI</span></div>
           <div class="project-content">
             <h3 class="project-title">Fintech Spend Intelligence</h3>
             <p class="project-description">Data model and visualization suite surfacing merchant trends and customer health. Identified $1.2M in at-risk revenue.</p>
@@ -182,6 +182,59 @@
   </footer>
 
   <script>
+    const typedElement = document.getElementById('hero-typed');
+
+    if (typedElement) {
+      const typingPhrases = [
+        "Hi, I'm Jack.",
+        "Hi, I'm a backend engineer.",
+        "Hi, I'm a passionate soccer fan and player."
+      ];
+
+      const typingSpeed = 75;
+      const deletingSpeed = 45;
+      const endHold = 1400;
+      const restartHold = 500;
+      const baseHoldLength = 3; // Keep "Hi," before writing the next line
+
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeHeroLine() {
+        const currentPhrase = typingPhrases[phraseIndex];
+
+        if (!isDeleting) {
+          typedElement.textContent = currentPhrase.slice(0, charIndex + 1);
+          charIndex += 1;
+
+          if (charIndex === currentPhrase.length) {
+            setTimeout(() => {
+              isDeleting = true;
+              typeHeroLine();
+            }, endHold);
+            return;
+          }
+        } else {
+          const nextLength = Math.max(baseHoldLength, charIndex - 1);
+          typedElement.textContent = currentPhrase.slice(0, nextLength);
+          charIndex = nextLength;
+
+          if (charIndex === baseHoldLength) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+            setTimeout(typeHeroLine, restartHold);
+            return;
+          }
+        }
+
+        const delay = isDeleting ? deletingSpeed : typingSpeed;
+        setTimeout(typeHeroLine, delay);
+      }
+
+      typeHeroLine();
+    }
+
     // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 

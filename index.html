@@ -1,35 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Jack Foster</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jack Foster | Software & Data Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="grid-2">
-        <div class="section-1">
-            <i class="fas fa-code fa-5x white"></i>
-            <h2>Jack Foster</h2>
-            <p>Indiana, USA</p>
-            <a href="https://twitter.com/jackfoster246"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/simplyjackfoster"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jack-foster-98466a9a/"><i class="fab fa-linkedin"></i></a>
+  <div class="bg-gradient"></div>
+  <div class="bg-spot one"></div>
+  <div class="bg-spot two"></div>
+  <header class="nav">
+    <div class="brand">Jack Foster</div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#ai-data">AI + Data</a>
+      <a class="pill" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__content">
+        <div class="eyebrow">Software Engineer · Data Engineer · Fintech + AI</div>
+        <h1>Building reliable data systems and clear products that feel effortless.</h1>
+        <p class="lede">I'm Jack Foster, currently at Vanguard. I design and build clean engineering solutions, analytics pipelines, and AI-driven tooling for real estate and fintech teams.</p>
+        <div class="cta-group">
+          <a class="btn primary" href="mailto:jackfoster246@gmail.com">Email</a>
+          <a class="btn ghost" href="assets/Jack_Foster_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <div class="icon-row">
+            <a href="https://github.com/simplyjackfoster" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jack-foster-98466a9a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/jackfoster246" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-        <div class="section-2">
-            <h2>About</h2>
-            <p>Hello! My name is Jack Foster, and I am a junior computer science student at Purdue University. My freshman year, I accepted an offer for a summer internship as a technical analyst at Cummins, but it was cancelled due to Covid. During my sophomore year, I accepted an internship offer from Liberty Mutual to work there as a software engineer intern.</p>
-            <h2>Skills</h2>
-            <p>Java, Python, C, Video Editing</p>
-            <h2>Projects</h2>
-            <a href="https://github.com/simplyjackfoster/CS-307-Project">UniRoom</a>
-            <a href="https://github.com/simplyjackfoster/Waste-Sorter">Waste Sorter</a>
-            <a href="https://github.com/simplyjackfoster/Airport-Manager">Airport Manager</a>
-            <h2>Contact</h2>
-            <p>jackfoster246@gmail.com</p>
+        <div class="meta-grid">
+          <div>
+            <span class="label">Focus</span>
+            <p>Data platforms, AI agents, trustworthy dashboards.</p>
+          </div>
+          <div>
+            <span class="label">Currently</span>
+            <p>Shipping analytics + automation for Vanguard teams.</p>
+          </div>
+          <div>
+            <span class="label">Next</span>
+            <p>Big Tech or startup roles in data/ML platforms.</p>
+          </div>
         </div>
-    </div>
+      </div>
+      <div class="hero__visual">
+        <div class="card depth">
+          <div class="card__title">Signal over noise</div>
+          <div class="sparkline">
+            <div class="bar" style="height: 30%"></div>
+            <div class="bar" style="height: 80%"></div>
+            <div class="bar" style="height: 55%"></div>
+            <div class="bar" style="height: 90%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 75%"></div>
+            <div class="bar" style="height: 95%"></div>
+          </div>
+          <div class="card__footer">
+            <span>Real-time metrics</span>
+            <span class="dot"></span>
+            <span>Stable pipelines</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section__header">
+        <p class="eyebrow">About</p>
+        <h2>Thoughtful engineering with a product lens.</h2>
+        <p class="lede narrow">I bridge software engineering and data science. At Vanguard, I move from backend services to analytics—wrangling cloud data, designing observability, and partnering with stakeholders to ship features that actually get used.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Principles</h3>
+          <ul>
+            <li>Clarity over complexity; predictable delivery.</li>
+            <li>Data stories that decision-makers trust.</li>
+            <li>Systems that are observable by default.</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>Now</h3>
+          <p>Building a real-estate analytics platform and AI agents that automate CloudWatch insights to LLMs. Experimenting with ZHVI/ZORI trends and home-value forecasting.</p>
+        </div>
+        <div class="about-card">
+          <h3>Location</h3>
+          <p>Indiana, USA · open to remote + hybrid opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Skills</p>
+        <h2>Stack for data-rich products.</h2>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <h4>Languages</h4>
+          <div class="pill-row">
+            <span class="pill">Python</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Java</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h4>Cloud</h4>
+          <div class="pill-row">
+            <span class="pill">AWS (Glue, Lambda, S3)</span>
+            <span class="pill">Spark</span>
+            <span class="pill">Docker</span>
+            <span class="pill">GitHub Actions</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h4>Data + AI</h4>
+          <div class="pill-row">
+            <span class="pill">Pandas</span>
+            <span class="pill">dbt</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">LLM Agents</span>
+            <span class="pill">Vector Search</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h4>Product</h4>
+          <div class="pill-row">
+            <span class="pill">Systems Design</span>
+            <span class="pill">Data Visualization</span>
+            <span class="pill">API Design</span>
+            <span class="pill">Observability</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected builds with measurable impact.</h2>
+        <p class="lede narrow">Each project pairs crisp engineering with a clear narrative—problem, solution, and impact.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="thumb gradient"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Real-Estate Analytics Platform</h3>
+              <div class="pill-row tight">
+                <span class="pill">AWS Glue</span>
+                <span class="pill">Spark</span>
+                <span class="pill">PostgreSQL</span>
+                <span class="pill">React</span>
+              </div>
+            </div>
+            <p class="project-text">Pipeline that ingests Zillow + census data, normalizes ZHVI/ZORI, and forecasts price movements. Built metrics-first dashboards with outlier alerts and cohort filters.</p>
+            <ul class="bullets">
+              <li>Reduced analyst prep time by 60% with automated feature store.</li>
+              <li>Forecast MAE improved by 14% after feature drift monitoring.</li>
+              <li>Edge-deployed tiles enable sub-second map interactions.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="thumb gradient dusk"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>AI Ops Agent for CloudWatch</h3>
+              <div class="pill-row tight">
+                <span class="pill">LLM Agents</span>
+                <span class="pill">Lambda</span>
+                <span class="pill">OpenSearch</span>
+                <span class="pill">TypeScript</span>
+              </div>
+            </div>
+            <p class="project-text">Agent that summarizes CloudWatch signals into concise briefs and suggests remediations. Enriched with runbooks and service ownership data for routed alerts.</p>
+            <ul class="bullets">
+              <li>Cut mean-time-to-respond by 35% through contextual summaries.</li>
+              <li>Auto-tickets high-confidence incidents with guardrails.</li>
+              <li>Shipped micro-interactions for transparent LLM steps.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="thumb gradient night"></div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Fintech Spend Intelligence</h3>
+              <div class="pill-row tight">
+                <span class="pill">Python</span>
+                <span class="pill">Airflow</span>
+                <span class="pill">dbt</span>
+                <span class="pill">Tableau</span>
+              </div>
+            </div>
+            <p class="project-text">Data model + visualization suite that surfaces merchant trends and customer health for finance teams. Built anomaly detection for cash flow volatility.</p>
+            <ul class="bullets">
+              <li>Enabled monthly financial reviews with 20+ executive-ready visuals.</li>
+              <li>Identified $1.2M in at-risk revenue via cohort drop detection.</li>
+              <li>Documentation-as-UI: tooltips, lineage, and scenario notes.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Experience</p>
+        <h2>Vanguard · Technology Leadership Program</h2>
+        <p class="lede narrow">Rotations across software engineering and data engineering. Partnered with product, risk, and data science teams to deliver dependable platforms.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Software Engineer</h3>
+              <span class="timeline-meta">Microservices · React · CI/CD</span>
+            </div>
+            <ul class="bullets">
+              <li>Shipped secure APIs for client onboarding with audit logging baked in.</li>
+              <li>Improved deployment time by 25% by standardizing pipelines.</li>
+              <li>Partnered with design to deliver componentized UI for internal tools.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Data Engineer</h3>
+              <span class="timeline-meta">Spark · Data Contracts · Observability</span>
+            </div>
+            <ul class="bullets">
+              <li>Built ingestion jobs with data quality rules and lineage surfacing.</li>
+              <li>Implemented monitoring that cut broken pipelines by 40%.</li>
+              <li>Served ML teams with feature-ready datasets and clear SLAs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-data" class="section highlight">
+      <div class="section__header">
+        <p class="eyebrow">AI + Data Work</p>
+        <h2>Analytics that stay reliable and readable.</h2>
+        <p class="lede narrow">From home-value forecasting to AI ops, I design systems that keep humans in the loop while automation does the heavy lifting.</p>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card">
+          <h4>Reventure-style visuals</h4>
+          <p>Dynamic storyboards of market signals with annotations and thresholds for decision-makers.</p>
+        </div>
+        <div class="ai-card">
+          <h4>Home-value forecasting</h4>
+          <p>Feature engineering on ZHVI/ZORI with geospatial joins; retraining cadence tied to drift metrics.</p>
+        </div>
+        <div class="ai-card">
+          <h4>Data pipelines</h4>
+          <p>AWS Glue + Spark jobs that standardize ingestion, schema evolution, and cost-aware storage.</p>
+        </div>
+        <div class="ai-card">
+          <h4>LLM agents</h4>
+          <p>Agents that translate CloudWatch signals into narratives, with traceable steps and controls.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s build the next reliable data product.</h2>
+        <p class="lede narrow">Reach out for roles, collaborations, or a walkthrough of the analytics platform.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h4>Email</h4>
+          <a class="link" href="mailto:jackfoster246@gmail.com">jackfoster246@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <h4>LinkedIn</h4>
+          <a class="link" href="https://www.linkedin.com/in/jack-foster-98466a9a/">in/jack-foster-98466a9a</a>
+        </div>
+        <div class="contact-card">
+          <h4>GitHub</h4>
+          <a class="link" href="https://github.com/simplyjackfoster">github.com/simplyjackfoster</a>
+        </div>
+      </div>
+      <footer class="footer">Crafted with clean engineering · Updated for Big Tech + startup recruiters.</footer>
+    </section>
+  </main>
 </body>
 </html>

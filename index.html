@@ -35,25 +35,34 @@
   <!-- Feature Section 1 -->
   <section class="scroll-section section-dark">
     <div class="section-content">
-      <div class="section-eyebrow">Engineering Excellence</div>
-      <h2 class="section-headline">Reliable backend systems designed for clarity, speed, and long-term adaptability.</h2>
-      <p class="section-description">I build services, APIs, and developer tools that are fast, observable, and engineered for real-world use. At Vanguard, I work on the backend foundations powering Portfolio &amp; Product Insights, the tools financial advisors use to model portfolios, analyze risk, and deliver data-driven recommendations.</p>
-      <p class="section-description">I’m also engineering MCP servers that allow LLMs to safely and intelligently interface with internal systems — unlocking entirely new workflows for teams.</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"><span class="icon-glyph">LF</span></div>
-          <h3 class="feature-title">Lightning Fast</h3>
-          <p class="feature-text">Optimized services and pipelines with efficient data access, caching, and execution paths.</p>
+      <div class="section-eyebrow">What guides my work</div>
+      <h2 class="section-headline">Human-first engineering with room for curiosity.</h2>
+      <p class="section-description">I love building clear, steady systems — but I’m just as energized by the people who use them. Coaching teammates, listening to advisors, and translating needs into something simple and dependable is the work that feels most like me.</p>
+      <p class="section-description">Off the keyboard, you’ll find me chasing soccer matches, tinkering with personal projects, and carving out time for family. Those experiences keep me grounded and make the technical craft feel personal.</p>
+      <div class="feature-grid personal-grid">
+        <div class="feature-card personal-card">
+          <h3 class="feature-title">People-first collaborator</h3>
+          <p class="feature-text">I’d rather over-communicate than leave someone guessing. Pairing, doc-writing, and reliable follow-through are how I keep teams moving.</p>
+          <ul class="feature-list">
+            <li>Favorite moments: whiteboarding with product partners and unblocking teammates.</li>
+            <li>Guiding value: clarity that lasts beyond the sprint.</li>
+          </ul>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"><span class="icon-glyph">PB</span></div>
-          <h3 class="feature-title">Precision Built</h3>
-          <p class="feature-text">Architectures designed with monitoring, logging, and metric visibility built in from the start.</p>
+        <div class="feature-card personal-card">
+          <h3 class="feature-title">Curious builder</h3>
+          <p class="feature-text">Personal experiments — from MCP servers to side projects — are my way of learning without the pressure of production.</p>
+          <ul class="feature-list">
+            <li>Recent focus: safe LLM interfaces for internal systems.</li>
+            <li>Always asking: how can this be easier for the next person?</li>
+          </ul>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"><span class="icon-glyph">PR</span></div>
-          <h3 class="feature-title">Production Ready</h3>
-          <p class="feature-text">Clean interfaces, robust testing, automated CI/CD, and deeply documented behavior teams can depend on.</p>
+        <div class="feature-card personal-card">
+          <h3 class="feature-title">Grounded in real life</h3>
+          <p class="feature-text">Family, soccer, and good stories keep me balanced. That balance makes me a calmer engineer when the stakes rise.</p>
+          <ul class="feature-list">
+            <li>Indiana-based, remote-friendly, and always up for meeting new teams.</li>
+            <li>Building software that feels human-first, not just high-tech.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -77,7 +86,9 @@
       <div class="projects-grid">
         <!-- Project 1 -->
         <div class="project-card">
-          <div class="project-image"><span class="icon-glyph icon-compact">FI</span></div>
+          <div class="project-image">
+            <img src="https://imagedelivery.net/4bY-B9-kfY2-7ZlgU2bHvw/8e92f297-f1f4-45e2-9625-922952f17300/58bed5a5-6d61-4fe2-29bc-ce0b27093200/public" alt="Vanguard Portfolio &amp; Product Insights landing page">
+          </div>
           <div class="project-content">
             <h3 class="project-title">Vanguard Portfolio &amp; Product Insights (Professional Work)</h3>
             <p class="project-description">Backend engineering for advisor-facing analytics tools enabling portfolio modeling, scenario analysis, and investment comparisons. Includes work with APIs, data services, and MCP-integrated systems that connect LLM intelligence to internal infrastructure.</p>
@@ -95,17 +106,22 @@
 
         <!-- Project 2 -->
         <div class="project-card">
-          <div class="project-image"><span class="icon-glyph icon-compact">RE</span></div>
-          <div class="project-content">
-            <h3 class="project-title">Real Estate Analytics Engine (Personal Project)</h3>
-            <p class="project-description">Backend pipeline merging Zillow data, census datasets, and BLS job statistics into a unified scoring model for appreciation, affordability, and rental competitiveness. Supports dashboards and automated alerting.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">AWS</span>
+          <div class="project-image project-image--calm">
+            <div class="project-image-overlay">
+              <h4 class="project-overlay-title">Teresa Foster Therapy</h4>
+              <p class="project-overlay-text">Trauma-informed counseling in Indiana.</p>
             </div>
-            <a href="#" class="project-link">Learn more →</a>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Teresa Foster Therapy (Family Project)</h3>
+            <p class="project-description">Rebuilt my mom's therapy site to be calm, trustworthy, and easy to navigate. Focused on clear calls to action, accessible contact options, and language that meets people where they are.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">Content Design</span>
+              <span class="tag">Accessibility</span>
+              <span class="tag">SEO</span>
+            </div>
+            <a href="https://teresafostertherapy.com/" class="project-link">Visit site →</a>
           </div>
         </div>
 
@@ -202,11 +218,13 @@
       const endHold = 1400;
       const restartHold = 500;
       const baseHoldLength = 0;
+      const maxCycles = 3;
+      const totalPhrasesToShow = maxCycles * typingPhrases.length;
 
       let phraseIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
-      let cyclesCompleted = 0;
+      let phrasesShown = 0;
 
       function typeHeroLine() {
         const currentPhrase = typingPhrases[phraseIndex];
@@ -216,6 +234,7 @@
           charIndex += 1;
 
           if (charIndex === currentPhrase.length) {
+            phrasesShown += 1;
             setTimeout(() => {
               isDeleting = true;
               typeHeroLine();
@@ -228,18 +247,15 @@
           charIndex = nextLength;
 
           if (charIndex === baseHoldLength) {
+            if (phrasesShown >= totalPhrasesToShow) {
+              typedElement.textContent = typingPhrases[0];
+              const cursor = document.querySelector('.typing-cursor');
+              if (cursor) cursor.style.display = 'none';
+              return;
+            }
+
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % typingPhrases.length;
-
-            if (phraseIndex === 0) {
-              cyclesCompleted += 1;
-              if (cyclesCompleted >= maxCycles) {
-                typedElement.textContent = typingPhrases[0];
-                const cursor = document.querySelector('.typing-cursor');
-                if (cursor) cursor.style.display = 'none';
-                return;
-              }
-            }
 
             setTimeout(typeHeroLine, restartHold);
             return;

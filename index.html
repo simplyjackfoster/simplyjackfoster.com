@@ -89,7 +89,7 @@
               <span class="tag">Cloud Architecture</span>
               <span class="tag">MCP</span>
             </div>
-            <a href="#" class="project-link">Learn more →</a>
+            <a href="https://advisors.vanguard.com/strategies/portfolio-strategies/portfolio-analytics" class="project-link">Learn more →</a>
           </div>
         </div>
 
@@ -205,6 +205,7 @@
       let phraseIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
+      let cyclesCompleted = 0;
 
       function typeHeroLine() {
         const currentPhrase = typingPhrases[phraseIndex];
@@ -228,6 +229,17 @@
           if (charIndex === baseHoldLength) {
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+
+            if (phraseIndex === 0) {
+              cyclesCompleted += 1;
+              if (cyclesCompleted >= maxCycles) {
+                typedElement.textContent = typingPhrases[0];
+                const cursor = document.querySelector('.typing-cursor');
+                if (cursor) cursor.style.display = 'none';
+                return;
+              }
+            }
+
             setTimeout(typeHeroLine, restartHold);
             return;
           }

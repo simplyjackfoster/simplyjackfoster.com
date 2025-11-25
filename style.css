@@ -366,11 +366,18 @@ nav {
 }
 
 .stat-item {
-  text-align: center;
+  text-align: left;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .stat-number {
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 600;
   margin-bottom: 8px;
   background: linear-gradient(135deg, var(--blue), #2997ff);
@@ -380,8 +387,9 @@ nav {
 }
 
 .stat-label {
-  font-size: 17px;
-  color: var(--gray-600);
+  font-size: 16px;
+  color: #cfd2d5;
+  line-height: 1.5;
 }
 
 /* Footer */

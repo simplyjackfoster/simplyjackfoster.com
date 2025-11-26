@@ -346,6 +346,27 @@ nav {
   overflow: hidden;
 }
 
+.project-image--code {
+  background: radial-gradient(circle at 20% 20%, rgba(0, 113, 227, 0.3), rgba(0, 113, 227, 0)),
+              radial-gradient(circle at 80% 0%, rgba(118, 75, 162, 0.35), rgba(118, 75, 162, 0)),
+              linear-gradient(135deg, #0f172a 0%, #111827 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.project-image--code::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
 .project-image-overlay {
   position: absolute;
   inset: 0;

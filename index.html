@@ -24,16 +24,13 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title"><span id="hero-typed" aria-live="polite"></span><span class="typing-cursor" aria-hidden="true"></span></h1>
-      <p class="hero-subtitle">Backend Software Engineer building scalable systems &amp; tools.</p>
-      <p class="hero-description">Engineering clean architectures, data powered features, and AI experiences.</p>
-      <div class="cta-buttons">
-        <a href="#work" class="btn btn-primary">View my work</a>
-        <a href="#contact" class="btn btn-secondary">Get in touch</a>
-      </div>
+    <h1 class="hero-title"><span id="hero-typed" aria-live="polite"></span><span class="typing-cursor" aria-hidden="true"></span></h1>
+    <p class="hero-subtitle">Backend Software Engineer building scalable systems &amp; tools.</p>
+    <p class="hero-description">Engineering clean architectures, data powered features, and AI experiences.</p>
+    <div class="cta-buttons">
+      <a href="#work" class="btn btn-primary">View my work</a>
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
     </div>
-    <div class="hero-scroll-indicator" aria-hidden="true"></div>
   </section>
 
   <!-- Feature Section 1 -->
@@ -204,26 +201,6 @@
   </footer>
 
   <script>
-    const heroContent = document.querySelector('.hero-content');
-    const parallaxMaxShift = 10;
-    const parallaxActivation = 16;
-    let parallaxTicking = false;
-
-    function updateHeroParallax(scrollY) {
-      if (!heroContent) return;
-      const clamped = Math.min(Math.max(scrollY, 0), parallaxActivation);
-      const progress = clamped / parallaxActivation;
-      const shift = -(progress * parallaxMaxShift);
-      heroContent.style.transform = `translateY(${shift}px)`;
-      parallaxTicking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-      if (parallaxTicking) return;
-      parallaxTicking = true;
-      window.requestAnimationFrame(() => updateHeroParallax(window.scrollY));
-    }, { passive: true });
-
     const typedElement = document.getElementById('hero-typed');
 
     if (typedElement) {
